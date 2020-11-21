@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .full {
+            height: fit-content;
+            width: 100%;
+            background-image: linear-gradient(to right, rgb(252, 136, 27), rgb(253, 230, 21));
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .upper {
+            height: fit-content;
+            right: -10px;
+            top: -10px;
+            left: -10px;
+            background-image: linear-gradient(to right, rgb(252, 136, 27), rgb(253, 230, 21));
+            /*background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(250, 250, 242));*/
+
+        }
+
+        .topcont {
+            width: 1200px;
+            margin: auto;
+            height: fit-content;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        .navbar {
+
+            display: flex;
+            height: 50px;
+
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+
+        .navbar ul {
+            margin-left: 450px;
+        }
+
+        .navbar li {
+            top: 50%;
+            float: left;
+            list-style: none;
+            margin: 0px 10px;
+            cursor: pointer;
+
+        }
+
+        .navbar li :hover {
+            color: rgb(255, 0, 0);
+        }
+
+        .navbar li a {
+            font-size: 16px;
+            padding: 3px;
+            text-decoration: none;
+
+
+        }
+
+        .navbar li a:visited {
+            color: black;
+        }
+
+        .navbar li a:active {
+            color: black;
+        }
+
+        .line {
+
+            margin-top: 4px;
+            height: 1.5px;
+            background-color: black;
+            border-radius: 0.5px;
+            margin-bottom: 5px;
+        }
+
+
+        .logo {
+            max-width: 200px;
+
+            margin-left: 2px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+
+        .profileicon {
+            max-width: 34px;
+            cursor: pointer;
+            transition: 0.5s;
+
+
+        }
+
+        .profileicon:hover {
+            max-width: 36px;
+        }
+
+        .back{
+            font-family: 'Poppins',sans-serif;
+            width: 1200px;
+            height: fit-content;
+            margin: auto;
+            background-color: rgba(248, 204, 103, 0.3);
+            border-radius: 20px;
+        }
+
+        .back div{
+            width: 500px;
+            margin: auto;
+        }
+
+
+        .c1 , .c2 , .c3 , .c4 , .c5 , .c6{
+
+            
+            left: 200px;
+            top: 200px;
+            
+        }
+
+        
+
+        .next,.prev{
+            border: 1px solid black;
+            width: 100px;
+            background: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            font-family:'Poppins',sans-serif ;
+            cursor: pointer;
+        }
+
+        .next{
+            float: right;
+        }
+
+        .submit{
+            border: 1px solid black;
+            width: 100px;
+            background: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            font-family:'Poppins',sans-serif ;
+            cursor: pointer;
+            position: absolute;
+            left: 680px;
+            top: 1200px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="full">
+
+        <div class="upper">
+            <div class="topcont">
+                <nav class="navbar">
+                    <img class="logo" src="Images/preplogo2.png">
+
+                    <ul>
+                        <li><a href="Homepagenew.html">Home</a></li>
+                        <li><a>Quiz Time</a></li>
+                        <li><a>Stressed Up?</a></li>
+                        <li><a>About Us</a></li>
+                    </ul>
+
+                    <img onmouseover="setNewProfIcon()" onmouseout="setOldProfIcon()" id="proficon" class="profileicon"
+                        src="Images/profileicon.png">
+                </nav>
+
+                <div class="line">
+
+                </div>
+
+                <h2 class="quiz-topic">Web Development</h2>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="back">
+        <h2 class="text-info"><u>Subject 1:Test 1</u></h2>
+
+        <div class="c1">
+            <h3>The answer to this question is :</h3>
+            <input type="radio" id="result1" name="choice1" value="A1" class="butt2" />Choice 1<br />
+            <input type="radio" id="result2" name="choice1" value="B1" class="butt2" />Choice 2<br />
+            <input type="radio" id="result3" name="choice1" value="C1" class="butt2" />Choice 3<br />
+            <input type="radio" id="result4" name="choice1" value="D1" class="butt2" />Choice 4 <br />
+            <p id="w1para" class="text-danger"></p>
+        </div>
+
+
+        <!--
+            <br />
+        <p id="para7"></p>
+
+        !-->
+
+
+        <div class="c2">
+            <h3>The answer to the second question is :</h3>
+            <input type="radio" id="result5" name="choice2" value="A2" class="butt2" />Choice 1<br />
+            <input type="radio" id="result6" name="choice2" value="B2" class="butt2" />Choice 2<br />
+            <input type="radio" id="result7" name="choice2" value="C2" class="butt2" />Choice 3<br />
+            <input type="radio" id="result8" name="choice2" value="D2" class="butt2" />Choice 4<br />
+            <p id="w2para" class="text-danger"></p>
+        </div>
+
+        <!--
+
+        <p id="para"></p>
+
+
+
+        <br />
+        <p id="para6"></p>
+
+        !-->
+
+        <div class="c3">
+            <h3>The answer to the third question is :</h3>
+            <input type="radio" id="result9" name="choice3" value="A3" class="butt2" />Choice 1<br />
+            <input type="radio" id="result10" name="choice3" value="B3" class="butt2" />Choice 2<br />
+            <input type="radio" id="result11" name="choice3" value="C3" class="butt2" />Choice 3<br />
+            <input type="radio" id="result12" name="choice3" value="D3" class="butt2" />Choice 4 <br />
+            <p id="w3para" class="text-danger"></p>
+        </div>
+
+        <div class="c4">
+            <h3>The answer to the fourth question is :</h3>
+            <input type="radio" id="result13" name="choice4" value="A4" class="butt2" />Choice 1<br />
+            <input type="radio" id="result14" name="choice4" value="B4" class="butt2" />Choice 2<br />
+            <input type="radio" id="result15" name="choice4" value="C4" class="butt2" />Choice 3<br />
+            <input type="radio" id="result16" name="choice4" value="D4" class="butt2" />Choice 4 <br />
+            <p id="w4para" class="text-danger"></p>
+        </div>
+
+        <div class="c5">
+            <h3>The answer to the fifth question is :</h3>
+            <input type="radio" id="result17" name="choice5" value="A5" class="butt2" />Choice 1<br />
+            <input type="radio" id="result18" name="choice5" value="B5" class="butt2" />Choice 2<br />
+            <input type="radio" id="result19" name="choice5" value="C5" class="butt2" />Choice 3<br />
+            <input type="radio" id="result20" name="choice5" value="D5" class="butt2" />Choice 4 <br />
+            <p id="w5para" class="text-danger"></p>
+        </div>
+
+        <div class="c6">
+            <h3>The answer to the sixth question is :</h3>
+            <input type="radio" id="result21" name="choice6" value="A6" class="butt2" />Choice 1<br />
+            <input type="radio" id="result22" name="choice6" value="B6" class="butt2" />Choice 2<br />
+            <input type="radio" id="result23" name="choice6" value="C6" class="butt2" />Choice 3<br />
+            <input type="radio" id="result24" name="choice6" value="D6" class="butt2" />Choice 4 <br />
+            <p id="w6para" class="text-danger"></p>
+
+            <button type="button" onclick="getInput(this.value)">SUBMIT</button>
+            <button onclick="display()">DISPLAY</button>
+            <p id="para2"></p>
+            <br />
+            <button onclick="check()">CHECK THE RESULT</button>
+            <h4 id="para3" class="bg-success"></h4>
+            <h4 id="para4" class="bg-danger"></h4>
+            <h4 id="para20" class="bg-warning"></h4>
+            <h4 id="para21" class="bg-warning"></h4>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var names = [];
+    function getInput(butt2) {
+        var elem = document.getElementsByClassName("butt2");
+        for (var k = 0; k < elem.length; k++) {
+
+            if (elem[k].checked) {
+                names.push(elem[k].value);
+            }
+        }
+
+
+    }
+    function display() {
+
+        for (var j = 0; j < names.length; j++) {
+            document.getElementById("para2").innerHTML = names;
+        }
+
+
+    }
+
+    function check() {
+        var c = 0;
+        var w = 0;
+        var wrong = [];
+        var result = new Array("D1", "A2", "A3", "B4", "C5", "D6");
+
+        for (var i = 0; i < 6; i++) {
+            if (result[i] == names[i]) {
+                c = c + 1;
+            }
+            else {
+                w = w + 1;
+                wrong.push(i + 1);
+            }
+        }
+        var score = (c * 3) - w;
+        var per = (score / 18) * 100;
+        document.getElementById("para3").innerHTML = "The total right answers are " + c;
+        document.getElementById("para4").innerHTML = "The total wrong answers are " + w;
+        document.getElementById("para20").innerHTML = "Your score is " + score;
+        if (score > 0) {
+            document.getElementById("para21").innerHTML = "The percentage is " + per;
+        }
+        else {
+            document.getElementById("para21").innerHTML = "";
+        }
+        if (wrong.includes(1)) {
+            document.getElementById("w1para").innerHTML = "WRONG.The right answer is " + result[0];
+        }
+        else {
+            document.getElementById("w1para").innerHTML = "<p class='text-success'>Your Answer is RIGHT</p>"
+        }
+        if (wrong.includes(2)) {
+            document.getElementById("w2para").innerHTML = "WRONG.The right answer is " + result[1];
+        }
+        else {
+            document.getElementById("w2para").innerHTML = "<p class='text-success'>Your Answer is RIGHT</p>"
+        }
+        if (wrong.includes(3)) {
+            document.getElementById("w3para").innerHTML = "WRONG.The right answer is " + result[2];
+        }
+        else {
+            document.getElementById("w3para").innerHTML = "<p class='text-success'>Your Answer is RIGHT</p>"
+        }
+        if (wrong.includes(4)) {
+            document.getElementById("w4para").innerHTML = "WRONG.The right answer is " + result[3];
+        }
+        else {
+            document.getElementById("w4para").innerHTML = "<p class='text-success'>Your Answer is RIGHT</p>"
+        }
+        if (wrong.includes(5)) {
+            document.getElementById("w5para").innerHTML = "WRONG.The right answer is " + result[4];
+        }
+        else {
+            document.getElementById("w5para").innerHTML = "<p class='text-success'>Your Answer is RIGHT</p>"
+        }
+        if (wrong.includes(6)) {
+            document.getElementById("w6para").innerHTML = "WRONG.The right answer is " + result[5];
+        }
+        else {
+            document.getElementById("w6para").innerHTML = "<p class='text-success'>Your Answer is RIGHT</p>"
+        }
+
+    }
+
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+    
+</body>
+</html>
